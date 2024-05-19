@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Library Admin Home</title>
+   <link rel="stylesheet" href="../css/Admin.css">
+</head>
+
+<body>
+   <div class="logo">
+      <img src="../img/logo.svg" style="width: 10%;">
+      <h2 style="margin: 0px 15px;">Admin Home</h2>
+   </div>
+   <nav>
+      <a href="Admin_Home.html">Home</a>
+      <a href="AdminBooks.html">View All Books</a>
+      <a href="AddBook.html">Add Book</a>
+      <a href="ManageUsers.html">Manage Users</a>
+      <a href="../Index.html" onclick="(()=>{localStorage.removeItem('currentUser')})()">Logout</a>
+   </nav>
+   <div class="form-up" style="text-align: center;margin-top: 150px;">
+      <h2>Welcome, Administrator!</h2>
+      <p>This is the admin home page for managing open library system.</p>
+      <p>You can perform various tasks such as adding new books, editing books, managing users and more.</p>
+   </div>
+
+   <!-- <script>
+      window.alert("Dear Eng.Nehal, In order to fully utilize the site and see all the features and dynamic data that we used you must add books as an admin first so you can see the books, books aren't automatically introduced an admin must add them first because we used local storage and you have to open it using a live server because every device has different path names. \nThanks in Advance !!")
+   </script> -->
+</body>
+
+</html>

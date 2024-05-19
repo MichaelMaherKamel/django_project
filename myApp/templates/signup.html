@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../static/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/Signing.css" />
+    <link rel="stylesheet" href="../static/css/Style.css" />
+  </head>
+
+  <!-- <body>
+    <nav id="nav"></nav>
+    <div class="page">
+      <div class="form-up">
+        <h1 style="text-align: center; margin-top: 0">Welcome to our Library, Sign Up Now:</h1>
+        <div>
+          <label for="signUpName">Username:</label>
+          <input type="text" id="signUpName" name="signUpName" class="input" onkeyup="Valid()" />
+          <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+            Minimum 3 characters, special characters and numbers not allowed
+          </div>
+
+          <label for="signUpEmail">Email:</label>
+          <input type="email" id="signUpEmail" name="signUpEmail" class="input" onkeyup="Valid()" />
+          <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">Email not valid *exemple@yyy.zzz</div>
+
+          <label for="signUpPassword">Password:</label>
+          <input type="password" id="signUpPassword" name="signUpPassword" class="input" onkeyup="Valid()" />
+          <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+            Enter valid password *Minimum eight characters, at least one letter and one number:*
+          </div>
+
+          <label for="signUpRePassword">Confirm Password:</label>
+          <input type="password" id="signUpRePassword" name="signUpRePassword" class="input" onkeyup="Valid()" />
+          <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid repassword</div>
+
+          <label style="display: block; margin-bottom: 5px">Role :</label>
+          <div style="margin-bottom: 15px; display: flex">
+            <label for="role-User" style="font-weight: 600">User</label>
+            <input type="radio" name="role" id="role-User" onchange="Valid()" />
+            <label for="role-Admin" style="margin-left: 10px; font-weight: 600">Admin</label>
+            <input type="radio" name="role" id="role-Admin" onchange="Valid()" />
+          </div>
+        </div>
+        <button id="signUpButton" onclick="Submit()" disabled>Register</button>
+        <div class="register-link">
+          <p style="margin-bottom: 0">Already have an account? <a href="/login">Login</a></p>
+          <div id="alert"></div>
+        </div>
+      </div>
+    </div> -->
+
+  <body>
+    <nav id="nav"></nav>
+    <div class="page">
+      <div class="form-up">
+        <h1 style="text-align: center; margin-top: 0">Welcome to our Library, Sign Up Now:</h1>
+        <form onsubmit="Submit(event)">
+          {% csrf_token %}
+          <div>
+            <label for="signUpName">Username:</label>
+            <input type="text" id="signUpName" name="signUpName" class="input" onkeyup="Valid()" />
+            <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+              Minimum 3 characters, special characters and numbers not allowed
+            </div>
+
+            <label for="signUpEmail">Email:</label>
+            <input type="email" id="signUpEmail" name="signUpEmail" class="input" onkeyup="Valid()" />
+            <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">Email not valid *example@yyy.zzz</div>
+
+            <label for="signUpPassword">Password:</label>
+            <input type="password" id="signUpPassword" name="signUpPassword" class="input" onkeyup="Valid()" />
+            <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+              Enter valid password *Minimum eight characters, at least one letter and one number:*
+            </div>
+
+            <label for="signUpRePassword">Confirm Password:</label>
+            <input type="password" id="signUpRePassword" name="signUpRePassword" class="input" onkeyup="Valid()" />
+            <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">Enter valid repassword</div>
+
+            <label style="display: block; margin-bottom: 5px">Role:</label>
+            <div style="margin-bottom: 15px; display: flex">
+              <label for="role-User" style="font-weight: 600">User</label>
+              <input type="radio" name="role" id="role-User" value="user" onchange="Valid()" />
+              <label for="role-Admin" style="margin-left: 10px; font-weight: 600">Admin</label>
+              <input type="radio" name="role" id="role-Admin" value="admin" onchange="Valid()" />
+            </div>
+          </div>
+          <button id="signUpButton" type="submit" disabled>Register</button>
+          <div class="register-link">
+            <p style="margin-bottom: 0">Already have an account? <a href="/login">Login</a></p>
+            <div id="alert"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../static/Js/Navbar.js"></script>
+    <script src="../static/Js/Signup.js"></script>
+  </body>
+</html>
