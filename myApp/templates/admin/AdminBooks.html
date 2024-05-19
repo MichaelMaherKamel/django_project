@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Available Books</title>
+   <link rel="stylesheet" href="../css/all.min.css">
+   <link rel="stylesheet" href="../css/Signing.css">
+   <link rel="stylesheet" href="../css/Admin.css">
+   
+</head>
+
+<body>
+    <div class="logo">
+        <img src="../img/logo.svg" style="width: 10%;">
+        <h2 style="margin: 0px 15px;">Admin Home</h2>
+     </div>
+     <nav>
+        <a href="Admin_Home.html">Home</a>
+        <a href="AdminBooks.html">View All Books</a>
+        <a href="AddBook.html">Add Book</a>
+        <a href="ManageUsers.html">Manage Users</a>
+        <a href="../Index.html" onclick="(()=>{localStorage.removeItem('currentUser')})()">Logout</a>
+     </nav>
+   <section class="form-up" style="width: 75%;margin: 80px auto;">
+      <div style="display: flex;align-items: center;justify-content: space-between;">
+         <h2 style="margin:0;">All Books</h2>
+         <div style="display: flex;align-items: center;">
+            <div style="margin-right: 10px;font-size: 20px;">
+               <label class="fa-solid fa-filter" for="genreSelect"></label>
+            </div>
+            <select id="genreSelect" class="select" onchange="selectBook()">
+               <option selected value="All">All Books</option>
+               <option value="Classic">Classic</option>
+               <option value="Romance">Romance</option>
+               <option value="Mystery">Mystery</option>
+               <option value="Thriller">Thriller</option>
+               <option value="Fiction">Fiction</option>
+            </select>
+         </div>
+      </div>
+      <table>
+         <tr id="bookShowCase"></tr>
+      </table>
+   </section>
+
+   <script src="../Js/AvailableBooks.js"></script>
+</body>
+
+</html>

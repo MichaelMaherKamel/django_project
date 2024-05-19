@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../static/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/Signing.css" />
+    <link rel="stylesheet" href="../static/css/Style.css" />
+  </head>
+
+  <body>
+    <nav id="nav"></nav>
+    <div class="page">
+      <div class="form-up">
+        <h1 style="text-align: center; margin-top: 0">Welcome to our Library, Login Now:</h1>
+        <div>
+          <label for="signInEmail">Email:</label>
+          <input type="email" id="signInEmail" name="signInEmail" class="input" onkeyup="Valid() " />
+          <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">Email not valid *exemple@yyy.zzz</div>
+
+          <label for="signInPassword">Password:</label>
+          <input type="password" id="signInPassword" name="signInPassword" class="input" onkeyup="Valid()" />
+          <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+            Enter valid password *Minimum eight characters, at least one letter and one number:*
+          </div>
+
+          <button disabled id="signInButton" onclick="LogIn()">Login</button>
+        </div>
+        <div class="register-link">
+          <p style="margin-bottom: 0">Don't have an account? <a href="/signup">Register</a></p>
+        </div>
+        <div id="alertIN"></div>
+      </div>
+    </div>
+
+    <script src="../static/Js/Navbar.js"></script>
+    <script src="../static/Js/Login.js"></script>
+  </body>
+</html>

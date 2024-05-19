@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Manage Users</title>
+   <link rel="stylesheet" href="../css/all.min.css">
+   <link rel="stylesheet" href="../css/Admin.css">
+</head>
+
+<body>
+   <div class="logo">
+      <img src="../img/logo.svg" style="width: 10%;">
+      <h2 style="margin: 0px 15px;">Admin Home</h2>
+   </div>
+   <nav>
+      <a href="Admin_Home.html">Home</a>
+      <a href="AdminBooks.html">View All Books</a>
+      <a href="AddBook.html">Add Book</a>
+      <a href="ManageUsers.html">Manage Users</a>
+      <a href="../Index.html" onclick="(()=>{localStorage.removeItem('currentUser')})()">Logout</a>
+   </nav>
+   <section>
+      <div class="borrowedlist" id="borrowMain">
+         <div class="exc" onclick="EXC()"><i class="fa-solid fa-x"></i></div>
+         <section id="borrowedlist"></section>
+      </div>
+      <table class="users">
+         <thead>
+            <th>ID</th>
+            <th>User</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Borrowed Books</th>
+            <th>Ban</th>
+         </thead>
+         <tbody id="body"></tbody>
+      </table>
+   </section>
+
+   <script src="../Js/ManageUsers.js"></script>
+</body>
+
+</html>

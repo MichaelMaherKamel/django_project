@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Add Book</title>
+   <link rel="stylesheet" href="../css/Signing.css">
+   <link rel="stylesheet" href="../css/Admin.css">
+</head>
+
+<body>
+   <div class="logo">
+      <img src="../img/logo.svg" style="width: 10%;">
+      <h2 style="margin: 0px 15px;">Admin Home</h2>
+   </div>
+   <nav>
+      <a href="Admin_Home.html">Home</a>
+      <a href="AdminBooks.html">View All Books</a>
+      <a href="AddBook.html">Add Book</a>
+      <a href="ManageUsers.html">Manage Users</a>
+      <a href="../Index.html" onclick="(()=>{localStorage.removeItem('currentUser')})()">Logout</a>
+   </nav>
+   <div class="form-up" style="margin: 40px auto;">
+      <h1 style="margin-top:0;text-align:center;">Edit Book</h1>
+
+      <label for="cover">Book Cover:</label>
+      <input type="file" id="cover" name="cover" class="input" onchange="file(event)">
+
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" class="input" onkeyup="valid()">
+      <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+         Minimum 4 characters and special characters aren't allowed
+      </div>
+
+      <label for="author">Author:</label>
+      <input type="text" id="author" name="author" class="input" onkeyup="valid()">
+      <div id="authorAlert" class="alert alert-danger w-100 mt-2 d-none">
+         Minimum 4 characters, special characters and numbers not allowed
+      </div>
+
+      <label for="category">Category:</label>
+      <select id="category" name="category" class="select" onselect="valid()">
+         <option selected hidden disabled></option>
+         <option>Classic</option>
+         <option>Romance</option>
+         <option>Mystery</option>
+         <option>Thriller</option>
+         <option>Fiction</option>
+      </select>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" class="input" onkeyup="valid()"></textarea>
+      <div id="descAlert" class="alert alert-danger w-100 mt-2 d-none">
+         Minimum 10 characters
+      </div>
+
+      <button id="addBook" disabled onclick="Submit()">Add Book</button>
+   </div>
+
+   <script src="../Js/EditBooks.js"></script>
+</body>
+
+</html>

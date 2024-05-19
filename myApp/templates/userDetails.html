@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+    <style>
+      .book-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .book-cover {
+        margin-right: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+      }
+
+      .book-cover img {
+        width: 100%;
+        display: block;
+        transition: transform 0.3s;
+      }
+
+      .book-cover img:hover {
+        transform: scale(1.07);
+      }
+
+      .book-info {
+        flex: 1;
+      }
+
+      .book-info p {
+        margin: 0;
+        color: #666;
+        font-size: 16px;
+      }
+
+      .book-info h2 {
+        margin-top: 0;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .book-info p.description {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      span {
+        font-weight: bold;
+        color: black;
+      }
+    </style>
+    <link rel="stylesheet" href="../static/css/all.min.css" />
+    <link rel="stylesheet" href="../static/css/Style.css" />
+  </head>
+
+  <body>
+    <nav id="nav"></nav>
+    <div class="book-details form-up" id="myBook"></div>
+
+    <script src="../static/JS/Navbar.js"></script>
+    <script src="../static/Js/Details.js"></script>
+  </body>
+</html>
